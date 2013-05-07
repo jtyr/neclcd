@@ -243,7 +243,7 @@ int main(int argc, char **argv) {
 
 
 void help(void) {
-	puts("Usage: lcd [OPTIONS]\n");
+	puts("Usage: neclcd [OPTIONS]\n");
 	puts("OPTIONS:");
 	puts("  -t, --type=VAL         message type");
 	puts("                         ('A' = command [not implemented properly]");
@@ -258,9 +258,9 @@ void help(void) {
 	puts("  -e, --debug            debug mode\n");
 	puts("  -h, --help             display this help and exit\n");
 	puts("Examples:");
-	puts("lcd --dest=A --type=A --command=0C");
-	puts("lcd --dest=A --type=C --codepage=00 --code=60");
-	puts("lcd --dest=A --type=E --codepage=00 --code=60 --value=12\n");
+	puts("neclcd --dest=A --type=A --command=0C");
+	puts("neclcd --dest=A --type=C --codepage=00 --code=60");
+	puts("neclcd --dest=A --type=E --codepage=00 --code=60 --value=12\n");
 	puts("Report bugs to <jiri(dot)tyr(at)gmail(dot)com>.");
 
 	exit(-1);
