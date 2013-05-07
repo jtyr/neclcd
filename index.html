@@ -49,6 +49,31 @@ $ make manifest - generate new MANIFEST
 $ make dist     - pack all files in MANIFEST
 $ make clean    - clean dir
 </code></pre>
+
+<h1>Usage</h1>
+
+<pre><code>Usage: neclcd [OPTIONS]
+
+OPTIONS:
+  -t, --type=VAL         message type
+                         ('A' = command [not implemented properly]
+                          'C' = get current param
+                          'E' = set param)
+  -d, --dest=VAL         destination address (default is 'A')
+  -s, --src=VAL          source equipment ID (default is '0')
+  -p, --codepage=VAL     OP code page
+  -c, --code=VAL         OP code
+  -v, --value=VAL        value
+  -m, --command=VAL      command
+  -e, --debug            debug mode
+
+  -h, --help             display this help and exit
+
+Examples:
+neclcd --dest=A --type=A --command=0C
+neclcd --dest=A --type=C --codepage=00 --code=60
+neclcd --dest=A --type=E --codepage=00 --code=60 --value=12
+</code></pre>
         </section>
 
         <footer>
